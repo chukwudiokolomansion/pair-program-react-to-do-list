@@ -1,20 +1,20 @@
-import './App.css'
-import Navbar from './Components/Navbar'
-import Sidebar from './Components/Sidebar'
-import Footer from './Components/Footer'
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import Sidebar from "./Components/Sidebar";
+import Footer from "./Components/Footer";
+import TaskList from "./Components/TaskList";
 
 function App() {
-
   return (
     <>
+      <Navbar />
+      <Sidebar />
 
-    <Navbar />
-    <Sidebar />
-    <Footer />
+      <TaskList />
 
-
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

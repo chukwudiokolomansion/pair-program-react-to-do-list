@@ -1,4 +1,6 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   const today = new Date().toLocaleDateString();
@@ -8,15 +10,13 @@ function Sidebar() {
       <div>
         <h3>Menu</h3>
         <ul style={styles.list}>
-          <li>🏠 Home</li>
+          <Link to="/"><li>🏠 Home</li></Link>
           <li style={{ position: "relative" }}>
             <span>ℹ️ About</span>
             <div style={styles.dropdown}>
-              <a
-                href="https://github.com/chukwudiokolomansion"
-                target="_blank"
-              >GitHub: Chukwudi</a>
-              <a href="https://github.com/AybikeCV" target="_blank">GitHub: Aybike</a>
+              <Link to="https://github.com/chukwudiokolomansion">GitHub: Chukwudi</Link>
+
+              <Link to="https://github.com/AybikeCV">GitHub: Aybike</Link>
             </div>
           </li>
         </ul>

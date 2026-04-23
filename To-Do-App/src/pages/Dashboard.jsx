@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import tasks from "./task.json";
 
 function Dashboard() {

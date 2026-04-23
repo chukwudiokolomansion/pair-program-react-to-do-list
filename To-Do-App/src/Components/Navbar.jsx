@@ -1,16 +1,18 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { Routes, Route } from "react-router-dom"; 
 
 function Navbar() {
   const today = new Date().toLocaleDateString();
 
+  const [searchParams, setSearchParams] = useSearchParams;
   const [search, setSearch] = useState("");
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    alert("Searching for: " + search);
-  };
+  if (search) {
+    setSearchParams({ search: search });
+  }else {
+    setSearchParams({});
+  }
 
   const [showUserMenu, setShowUserMenu] = useState(false);
 

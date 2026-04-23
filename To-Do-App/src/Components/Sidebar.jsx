@@ -12,12 +12,7 @@ function Sidebar() {
         <ul style={styles.list}>
           <Link to="/"><li>🏠 Home</li></Link>
           <li style={{ position: "relative" }}>
-            <span>ℹ️ About</span>
-            <div style={styles.dropdown}>
-              <Link to="https://github.com/chukwudiokolomansion">GitHub: Chukwudi</Link>
-
-              <Link to="https://github.com/AybikeCV">GitHub: Aybike</Link>
-            </div>
+            <Link to="/about">"<span>ℹ️ About</span></Link>
           </li>
         </ul>
       </div>
@@ -57,14 +52,5 @@ const styles = {
     padding: 0,
   },
 
-  dropdown: {
-    display: "none",
-    position: "absolute",
-    left: "0",
-    top: "25px",
-    background: "white",
-    padding: "10px",
-    border: "1px solid #ccc",
-    borderRadius: "5px",
-  },
+ 
 };

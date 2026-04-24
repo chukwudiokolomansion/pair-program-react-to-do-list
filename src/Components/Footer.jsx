@@ -9,11 +9,7 @@ function Footer() {
 <footer style={styles.footer}>
       <p>
         © {new Date().getFullYear()} ToDoToCheck |{" "}
-        <a
-          href="https://github.com/chukwudiokolomansion/pair-program-react-to-do-list"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://github.com/chukwudiokolomansion/pair-program-react-to-do-list" target="_blank">
           View on GitHub
         </a>
       </p>

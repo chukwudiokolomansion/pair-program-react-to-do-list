@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function About() {
   return (
@@ -10,12 +11,12 @@ function About() {
       <ul>
         <li>
           Ironhack March-2026 -
-          <a href="https://github.com/chukwudiokolomansion" target="_blank">
+          <Link to="https://github.com/chukwudiokolomansion">
             GitHub: Chukwudi
-          </a>
-          <a href="https://github.com/AybikeCV" target="_blank">
+          </Link>
+          <Link href="https://github.com/AybikeCV">
             GitHub: Aybike
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

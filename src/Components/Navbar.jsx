@@ -1,19 +1,24 @@
 import { useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
-import { Routes, Route } from "react-router-dom"; 
+import { useSearchParams } from "react-router-dom";
 
+import { useNavigate } from "react-router-dom";
 function Navbar() {
   const today = new Date().toLocaleDateString();
 
-  const [searchParams, setSearchParams] = useSearchParams;
+  const [searchParams, setSearchParams] = useSearchParams();
   const [search, setSearch] = useState("");
 
-  if (search) {
-    setSearchParams({ search: search });
-  }else {
-    setSearchParams({});
-  }
+  const navigate = useNavigate();
 
+  const handleSearch = (e) => {
+    e.preventDefault();
+
+    if (search) {
+      navigate(`/tasks?search=${ search }`);
+    } else {
+      setSearchParams("/tasks");
+    }
+  };
   const [showUserMenu, setShowUserMenu] = useState(false);
 
   return (
@@ -57,7 +62,7 @@ function Navbar() {
   );
 }
 
-export default Navbar
+export default Navbar;
 
 const styles = {
   nav: {
@@ -72,7 +77,6 @@ const styles = {
     display: "flex",
     alignItems: "center",
     gap: "10px",
-
   },
   right: {
     display: "flex",

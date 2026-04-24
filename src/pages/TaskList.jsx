@@ -3,18 +3,28 @@
     TASK LIST RENDERING*/
 }
 
-import tasks from "./task.json";
-import { Routes, Route } from "react-router-dom";
-import { Link } from "react-router-dom";
+import tasksData from "./task.json";
+import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 function TaskList() {
-{
+
   const [tasks, setTasks] = useState(tasksData);
 
+  const[searchParams, setSearchParams] = useSearchParams();
+  const search = searchParams.get("search") || "" ;
+  
   const handleDelete = (indexToDelete) => {
     const updatedTasks = tasks.filter((_, index) => index !== indexToDelete);
     setTasks(updatedTasks);
   };
+
+  const filteredTasks = tasks.filter((item) => {
+    return item.task.includes(search);
+  })
+  //setTasks(filteredTasks);
+
+  
 
   return (
     <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
@@ -39,6 +49,6 @@ function TaskList() {
     </ul>
   );
 }
-}
+
 
 export default TaskList;

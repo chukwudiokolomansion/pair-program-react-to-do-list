@@ -10,8 +10,8 @@ function Dashboard() {
 
       {tasks.map((item, index) => (
         <div key={index}>
-          <Link to={`/item/${item.id}`}>
-            {item.tasks}
+          <Link to={`/item/${index}`}>
+            {item.task}
           </Link>
         </div>
       ))}

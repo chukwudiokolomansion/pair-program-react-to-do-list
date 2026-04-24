@@ -9,12 +9,10 @@ function Sidebar() {
     <aside style={styles.sidebar}>
       <div>
         <h3>Menu</h3>
-        <ul style={styles.list}>
-          <Link to="/"><li>🏠 Home</li></Link>
-          <li style={{ position: "relative" }}>
-            <Link to="/about">"<span>ℹ️ About</span></Link>
-          </li>
-        </ul>
+
+        <Link to="/">🏠Dashboard</Link>
+        <br />
+        <Link to="/about">"ℹ️ About</Link>
       </div>
 
       <div style={styles.section}>
@@ -51,6 +49,4 @@ const styles = {
     listStyle: "none",
     padding: 0,
   },
-
- 
 };

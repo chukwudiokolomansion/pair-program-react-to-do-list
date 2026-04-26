@@ -12,7 +12,7 @@ const colors = [
   "#48bfe3",
   "#cdb4db",
   "#ffb347",
-  "#bdb2ff",
+  "#fb0404",
   "#ffd166",
   "#ffafcc",
   "#90dbf4",

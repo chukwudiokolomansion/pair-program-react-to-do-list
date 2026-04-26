@@ -12,7 +12,7 @@ function Sidebar() {
 
         <Link to="/">🏠Dashboard</Link>
         <br />
-        <Link to="/about">"ℹ️ About</Link>
+        <Link to="/about">ℹ️ About</Link>
       </div>
 
       <div style={styles.section}>
@@ -36,11 +36,11 @@ export default Sidebar;
 
 const styles = {
   sidebar: {
-    width: "220px",
+    width: 250,
     minHeight: "100vh",
     background: "#f4f4f4",
-    padding: "15px",
-    borderRight: "1px solid #ccc",
+    padding: 15,
+    borderLeft: "1px solid #ccc",
   },
   section: {
     marginTop: "20px",

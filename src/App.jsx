@@ -13,26 +13,32 @@ import { Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function App() {
-
   return (
-    
-  <>
+    <>
       <Navbar />
+<<<<<<< HEAD
       <Sidebar />
       
+=======
+>>>>>>> 765b2a99f6a223f64b076d125448636c0732ff10
 
-    <Routes>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/tasks" element={<TaskList />} />
-        <Route path="/item/:index" element={<TaskDetail />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <div className="layout">
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/tasks" element={<TaskList />} />
+            <Route path="/item/:index" element={<TaskDetail />} />
+            <Route path="/about" element={<About />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+
+        <Sidebar />
+      </div>
 
       <Footer />
-     </>
-    
-  )
-    }
+    </>
+  );
+}
 
 export default App;

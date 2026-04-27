@@ -5,5 +5,6 @@
   { "task": "Finish Day 1 Development Tasks", "completed": true},
   { "task": "Finish Day 1 Research Tasks", "completed": true},
   { "task": "Finish Day 2 Development Tasks", "completed": false},
-  { "task": "Finish Day 2 Research Tasks", "completed": false}
+  { "task": "Finish Day 2 Research Tasks", "completed": false},
+  { "task": "Break time walk around the Parks", "completed": true}
 ]

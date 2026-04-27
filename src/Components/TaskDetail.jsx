@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
-import tasksData from "./task.json";
 
-function TaskDetail() {
+function TaskDetail({ tasks }) {
   const { index } = useParams();
 
-  const task = tasksData[ index ];
+  const task = tasks[index];
+  if (!task) return <p>Task not found</p>;
 
   return (
     <div>

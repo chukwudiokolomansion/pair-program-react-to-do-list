@@ -13,8 +13,8 @@ function Navbar() {
   const handleSearch = (e) => {
     e.preventDefault();
 
-    if (search) {
-      navigate(`/tasks?search=${ search }`);
+    if (search.trim()) {
+      navigate(`/tasks?search=${search}`);
     } else {
       setSearchParams("/tasks");
     }

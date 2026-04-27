@@ -16,7 +16,7 @@ function Navbar() {
     if (search.trim()) {
       navigate(`/tasks?search=${search}`);
     } else {
-      setSearchParams("/tasks");
+      navigate("/tasks");
     }
   };
   const [showUserMenu, setShowUserMenu] = useState(false);

@@ -31,6 +31,13 @@ function Dashboard({ tasks, setTasks, addTask }) {
     setInputValue("");
   };
 
+  const handleToggleComplete = (indexToToggle) => {
+    const updatedTasks = tasks.map((item, index) =>
+      index === indexToToggle ? { ...item, completed: !item.completed } : item,
+    );
+    setTasks(updatedTasks);
+  };
+
   return (
     <>
       <form onSubmit={handleAddTask}>
@@ -57,6 +64,9 @@ function Dashboard({ tasks, setTasks, addTask }) {
               }}
             >
               <Link to={`/item/${index}`}>{item.task}</Link>
+              <button onClick={() => handleToggleComplete(index)}>
+                {item.completed ? "✔️" : "❌"}
+              </button>
               <button onClick={() => handleDelete(index)}>Remove</button>
             </div>
           ))}

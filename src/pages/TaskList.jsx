@@ -5,12 +5,17 @@
 
 import tasksData from "./task.json";
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 function TaskList({ tasks, setTasks }) {
   const handleDelete = (indexToDelete) => {
     const updatedTasks = tasks.filter((_, index) => index !== indexToDelete);
     setTasks(updatedTasks);
   };
+
+  const [searchParams] = useSearchParams()
+  const search = searchParams.get("search" || "")
+  const filteredTasks = tasks.filter((item) => item.task.includes(search))
 
   return (
     <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>

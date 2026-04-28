@@ -8,24 +8,35 @@ function Sidebar() {
   return (
     <aside style={styles.sidebar}>
       <div>
-        <h3>Menu</h3>
+        <h3 style={styles.text}>Menu</h3>
 
-        <Link to="/">🏠Dashboard</Link>
+        <Link style={styles.link} to="/">
+          <div>
+            🏠
+            <br />
+            Dashboard
+          </div>
+        </Link>
         <br />
-        <Link to="/about">ℹ️ About</Link>
+        <Link style={styles.link} to="/about">
+        
+         ℹ️ 
+         <br />
+          About 
+        </Link>
       </div>
 
       <div style={styles.section}>
-        <h3>📅 Calendar</h3>
-        <p>Today: {today}</p>
+        <h3 style={styles.text}>Calendar</h3>
+        <p style={styles.text}>Today: {today}</p>
       </div>
 
       <div style={styles.section}>
-        <h3>Tasks</h3>
+        <h3 style={styles.text}>Tasks</h3>
         <ul style={styles.list}>
-          <li>📌 Today</li>
-          <li>📆 Weekly</li>
-          <li>🗓 Monthly</li>
+          <li style={styles.text}>📌Today</li>
+          <li style={styles.text}>📆Weekly</li>
+          <li style={styles.text}>🗓Monthly</li>
         </ul>
       </div>
     </aside>
@@ -36,11 +47,13 @@ export default Sidebar;
 
 const styles = {
   sidebar: {
-    width: 250,
+    width: "150px",
+    height: "150px",
     minHeight: "100vh",
-    background: "#f4f4f4",
-    padding: 15,
+    background: "rgba(222, 84, 98, 0.97)",
+    padding: 35,
     borderLeft: "1px solid #ccc",
+    textAlign: "right",
   },
   section: {
     marginTop: "20px",
@@ -48,5 +61,20 @@ const styles = {
   list: {
     listStyle: "none",
     padding: 0,
+  },
+  text: {
+    textAlign: "right",
+    fontSize: "20px",
+    fontFamily: "courier",
+    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
+  },
+  link: {
+    display: "block",
+    textAlign: "right",
+    textDecoration: "none",
+    marginBottom: "5px",
+    textSize: "16px",
+    color: " #32ff08",
+    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.3)",
   },
 };

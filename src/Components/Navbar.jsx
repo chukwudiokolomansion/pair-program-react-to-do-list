@@ -26,7 +26,7 @@ function Navbar() {
       <nav style={styles.nav}>
         <div style={styles.left}>
           <span style={styles.logo}>✅📋</span>
-          <h2>To Do To Check</h2>
+          <h2>My To Do</h2>
           <span>Task Manager</span>
         </div>
 

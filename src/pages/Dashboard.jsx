@@ -40,6 +40,8 @@ function Dashboard({ tasks, setTasks, addTask }) {
 
   return (
     <>
+    <div className="page">
+
       <form onSubmit={handleAddTask}>
         <input
           type="text"
@@ -52,7 +54,6 @@ function Dashboard({ tasks, setTasks, addTask }) {
 
       <div className="container">
         <div className="grid">
-          {/*<h2>Dashboard</h2>*/}
 
           {tasks.map((item, index) => (
             <div
@@ -67,11 +68,12 @@ function Dashboard({ tasks, setTasks, addTask }) {
               <button onClick={() => handleToggleComplete(index)}>
                 {item.completed ? "✔️" : "❌"}
               </button>
-              <button onClick={() => handleDelete(index)}>Remove</button>
+              <button onClick={() => handleDelete(index)}>Del</button>
             </div>
           ))}
         </div>
       </div>
+    </div>
     </>
   );
 }
